@@ -1,0 +1,31 @@
+# you have to install bochs and bochs-x 
+# sudo apt-get install bochs bochs-x
+
+megs: 32
+
+#romimage: file=/usr/share/bochs/BIOS-bochs-latest, address=0xf0000
+#romimage: file=/usr/share/bochs/BIOS-bochs-latest, address=0xe0000
+#romimage: file=/usr/share/bochs/BIOS-bochs-latest
+romimage: file=/home/wbi/dev/bochs/bochs-20190421/bios/BIOS-bochs-latest
+
+#vgaromimage: file=/usr/share/bochs/VGABIOS-elpin-2.40
+#vgaromimage: file=/usr/share/bochs/VGABIOS-lgpl-latest
+vgaromimage: file=/home/wbi/dev/bochs/bochs-20190421/bios/VGABIOS-elpin-2.40
+
+floppya: 1_44=/dev/loop0, status=inserted
+
+boot: a
+
+mouse: enabled=0
+
+clock: sync=realtime
+
+#cpu: ips=500000
+cpu: ips=1000000
+
+# graphical debugger
+#display_library: x, options="gui_debug"
+
+#magic_break: enabled=0
+
+log: bochsout.txt
