@@ -12,7 +12,8 @@ romimage: file=/home/wbi/dev/bochs/bochs-20190421/bios/BIOS-bochs-latest
 #vgaromimage: file=/usr/share/bochs/VGABIOS-lgpl-latest
 vgaromimage: file=/home/wbi/dev/bochs/bochs-20190421/bios/VGABIOS-elpin-2.40
 
-floppya: 1_44=/dev/loop0, status=inserted
+# fixed loopback name which has to match with run_bochs.sh
+floppya: 1_44=/dev/loop654321, status=inserted
 
 boot: a
 
